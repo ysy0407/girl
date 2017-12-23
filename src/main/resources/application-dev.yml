@@ -1,0 +1,9 @@
+server:
+  port: 8088  #端口
+  context-path: /girl #项目访问路径
+
+girl:
+  cupSize: F
+  age: 18
+#配置中调用配置
+#content: "cupSize: ${cupSize}, age: ${age}"

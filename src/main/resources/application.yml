@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: prod
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/ysy_test?characterEncoding=utf8&useSSL=true # WARN SSL：在高版本需要指明是否进行SSL连接问题 useSSL=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+      # create:每次运行程序的时候会将原本表删去，创建新的表；
+      # create-drop：当应用停下来的时候，就会将表删除；
+      # update：第一次启动会创建，之后为更新表；
+      # none：默认的，什么都不做；
+      # validate：验证实体类和表的字段是否一直，如果不一致会报错
+    show-sql: true #在控制台输出sql语句
+
+girl:
+  vail:
+    # 不能为纯数字
+    right-0000: 请求成功~
+    err-1001: 你真的是这种罩杯？
+    err-1002: 年龄是必须告诉我们的~ # age = null
+    err-1003: 未满18岁禁止入内~ # age < 18
+    err-1004: 你真的这么大了？ # age > 120
+    err-9998: 你还在上小学吧？
+    err-9999: 其他错误
